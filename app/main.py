@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 
-from .ml import obtain_image
+from ml import obtain_image
 
 app = FastAPI()
 

@@ -7,8 +7,8 @@ from PIL.Image import Image
 token = os.getenv("HUGGINGFACE_TOKEN")
 
 # get your token at https://huggingface.co/settings/tokens
-model_id = "runwayml/stable-diffusion-v1-5" # "CompVis/stable-diffusion-v1-4"
-device = "mps" # "cuda"
+model_id =  "CompVis/stable-diffusion-v1-4" # "runwayml/stable-diffusion-v1-5" #
+device =  "cuda" # "mps" 
 
 
 pipe = StableDiffusionPipeline.from_pretrained(
