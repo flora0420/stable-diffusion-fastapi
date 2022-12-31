@@ -1,4 +1,5 @@
 import os
+from typing import Union
 
 import torch
 from diffusers import StableDiffusionPipeline
@@ -27,7 +28,8 @@ pipe.enable_attention_slicing() # < 64 GB of Ram
 def obtain_image(
     prompt: str,
     *,
-    seed: int | None = None,
+    # seed: int | None = None,
+    seed: Union[int, None] = None,
     num_inference_steps: int = 50,
     guidance_scale: float = 7.5,
 ) -> Image:

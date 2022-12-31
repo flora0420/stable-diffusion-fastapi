@@ -1,5 +1,7 @@
 import io
 
+from typing import Union
+
 from fastapi import FastAPI
 from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
@@ -34,7 +36,8 @@ def create_item(item: Item):
 def generate_image(
     prompt: str,
     *,
-    seed: int | None = None,
+    # seed: int | None = None,
+    seed: Union[int, None] = None,    
     num_inference_steps: int = 50,
     guidance_scale: float = 7.5
 ):
@@ -52,7 +55,8 @@ def generate_image(
 def generate_image_memory(
     prompt: str,
     *,
-    seed: int | None = None,
+    # seed: int | None = None,
+    seed: Union[int, None] = None,
     num_inference_steps: int = 50,
     guidance_scale: float = 7.5
 ):
